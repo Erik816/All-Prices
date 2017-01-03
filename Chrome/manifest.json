@@ -1,6 +1,6 @@
 {
   "name": "All Prices",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Chrome extension to easily display all price and style options for products on Amazon.com",
   "manifest_version": 2,
 
