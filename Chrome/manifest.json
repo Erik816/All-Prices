@@ -5,7 +5,7 @@
   "manifest_version": 2,
 
   "background": {
-      "content_scripts": ["background.js"],
+      "scripts": ["background.js"],
       "persistent": false
   },
 
