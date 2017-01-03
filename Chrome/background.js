@@ -17,12 +17,12 @@ chrome.pageAction.onClicked.addListener(function(activeTab) {
     var url = tabs[0].url;
     console.log(url);
 
-    var regex = new RegExp("http://www.amazon.com/([\\w-]+/)?(dp|gp/product)/(\\w+/)?(\\w{10})");
+    var regex = new RegExp("https://www.amazon.com/([\\w-]+/)?(dp|gp/product)/(\\w+/)?(\\w{10})");
 
     asin = url.match(regex);
 
     if (asin) {
-      chrome.tabs.create({url: "http://www.amazon.com/gp/offer-listing/" + asin[4]});
+      chrome.tabs.create({url: "https://www.amazon.com/gp/offer-listing/" + asin[4]});
     }
     else {
       notifications.notify({
