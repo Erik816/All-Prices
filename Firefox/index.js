@@ -19,10 +19,10 @@ var button = buttons.ActionButton({
 //with all prices listed for that ASIN
 function handleClick(state) {
   var url = tabs.activeTab.url;
-  var regex = new RegExp("http://www.amazon.com/([\\w-]+/)?(dp|gp/product)/(\\w+/)?(\\w{10})");
+  var regex = new RegExp("https://www.amazon.com/([\\w-]+/)?(dp|gp/product)/(\\w+/)?(\\w{10})");
   asin = url.match(regex);
   if (asin) {
-    tabs.open("http://www.amazon.com/gp/offer-listing/" + asin[4]);
+    tabs.open("https://www.amazon.com/gp/offer-listing/" + asin[4]);
   }
   else {
     notifications.notify({
